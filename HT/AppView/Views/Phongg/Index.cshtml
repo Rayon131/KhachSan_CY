@@ -1,0 +1,65 @@
+﻿@* @model IEnumerable<AppView.ViewModes.PhongVM> *@
+	@model IEnumerable<AppData.Phong>
+
+
+<!-- Room Section Start -->
+<div id="rooms">
+	<div class="container">
+		<div class="section-header">
+			<h2>Our Rooms</h2>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in mi libero. Quisque convallis, enim at venenatis tincidunt.
+			</p>
+		</div>
+		@foreach (var item in Model)
+		{
+			<div class="row">
+
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="room-img">
+								<div class="box12">
+									<img src="~/img/room/@item.Hinh">
+									<div class="box-content">
+										<h3 class="title">@item.TenPhong</h3>
+										<ul class="icon">
+											<li><a href="#" data-toggle="modal" data-target="#modal-id"><i class="fa fa-link"></i></a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="room-des">
+								<h3><a href="#" data-toggle="modal" data-target="#modal-id">@item.TenPhong</a></h3>
+								<p>@item.MoTa</p>
+								<ul class="room-icon">
+									<li class="icon-1"></li>
+									<li class="icon-2"></li>
+									<li class="icon-3"></li>
+									<li class="icon-4"></li>
+									<li class="icon-5"></li>
+									<li class="icon-6"></li>
+									<li class="icon-7"></li>
+									<li class="icon-8"></li>
+									<li class="icon-9"></li>
+									<li class="icon-10"></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-3">
+							<div class="room-rate">
+								<h3>From</h3>
+								<h3>@item.gia VND</h3>
+								<a href="#">Book Now</a>
+							</div>
+						</div>
+					</div>
+					<hr>
+				</div>
+			</div>
+		}
+	</div>
+</div>
+<!-- Room Section End -->
